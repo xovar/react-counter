@@ -4,7 +4,14 @@ import Card from './Card';
 function Main() {
   return (
     <div className='main'>
-      <Card></Card>
+      <div className='main-cards'>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+        <Card></Card>
+      </div>
     </div>
   );
 }

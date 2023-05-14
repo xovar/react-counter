@@ -46,6 +46,7 @@
   font-weight: 400;
   font-size: 16px;
   color: white;
+  padding: 10px 15px;
 }
 
 .top-section .menu-section .menu{
@@ -76,6 +77,17 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main .main-cards{
+  margin-top: 66px;
+  display: grid;
+  grid-template-columns: repeat(3, 340px); /* Creates 3 equal-width columns */
+  grid-auto-rows: minmax(100px, auto); /* Sets minimum row height to 100px */
+  grid-gap: 32px 20px; /* Gap between grid items */
 }
 
 .card {
