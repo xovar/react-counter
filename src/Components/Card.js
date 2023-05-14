@@ -8,9 +8,11 @@ function Card() {
             <div className='card-info'>
                 <div className='card-title'>Boiled Eggs</div>
                 <div className='card-text'>Lorem ipsum dolor sit amet consectetur. Odio elementum in neque cras eget est. </div>
+                <div className='btn'>
+                  <button>$10.00</button>
+                </div>
             </div>
         </div>
-        <button></button>
     </div>
   );
 }
