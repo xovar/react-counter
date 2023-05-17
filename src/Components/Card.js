@@ -1,6 +1,11 @@
+import { useContext, useEffect } from "react";
+import { useFood } from "../Context/FoodProvider";
 
 function Card(props) {
-  console.log(props.food.price)
+  const {data} = useFood();
+
+  console.log(data)
+
   return (
     <div className='card'>
         <div className='card-body'>

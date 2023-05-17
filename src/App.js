@@ -2,14 +2,15 @@ import { useEffect } from "react";
 import "./App.css";
 import Header from "./Components/Header";
 import Main from "./Components/Main";
+import FoodProvider from "./Context/FoodProvider";
 
 
 function App() {  
   return (
-    <div>
+    <FoodProvider>
       <Header></Header>
       <Main></Main>
-    </div>
+    </FoodProvider>
   );
 }
 
