@@ -97,7 +97,6 @@
   background-blend-mode: overlay, normal;
   backdrop-filter: blur(13.1842px);
   border-radius: 19.4467px;
-  border: 0.66px solid radial-gradient(80.69% 208.78% at 108.28% 112.58%, #EABFFF 0%, rgba(135, 38, 183, 0) 100%),radial-gradient(80.38% 222.5% at -13.75% -12.36%, #98F9FF 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .card .card-body{

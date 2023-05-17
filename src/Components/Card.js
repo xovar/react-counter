@@ -1,15 +1,15 @@
-import React from 'react';
 
-function Card() {
+function Card(props) {
+  console.log(props.food.price)
   return (
     <div className='card'>
         <div className='card-body'>
-            <div className='card-img'><img src="./Ellipse-1.png" alt="" /> </div>
+            <div className='card-img'><img src={props.food.pic} alt="" /> </div>
             <div className='card-info'>
-                <div className='card-title'>Boiled Eggs</div>
-                <div className='card-text'>Lorem ipsum dolor sit amet consectetur. Odio elementum in neque cras eget est. </div>
+                <div className='card-title'>{props.food.name}</div>
+                <div className='card-text'>{props.food.text}</div>
                 <div className='btn'>
-                  <button>$10.00</button>
+                  <button>${props.food.price}</button>
                 </div>
             </div>
         </div>
