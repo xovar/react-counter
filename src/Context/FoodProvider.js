@@ -1,18 +1,28 @@
-import React, { createContext, useContext, useEffect, useState } from 'react'
+import React, { createContext, useContext, useEffect, useReducer } from 'react'
+import { FoodReducer, initialState } from '../State/FoodState/FoodReducer';
+import { actionTypes } from '../State/FoodState/actionTypes';
 
 const FOOD_CONTEXT = createContext();
 
 export default function FoodProvider({children}) {
-    const [data, setData] = useState([]);
+
+    const [state, dispatch] = useReducer(FoodReducer,initialState);
 
     useEffect(() => {
+        dispatch({type: actionTypes.FACTHING_START})
         fetch('http://localhost:4000/foods')
         .then(res => res.json())
-        .then(data => setData(data));
+        .then(data => dispatch({type: actionTypes.FACTHING_SUCCESS, payload: data}))
+        .catch(()=>{
+            dispatch({type: actionTypes.FACTHING_ERROR})
+        })
     },[]);
 
+    console.log(state)
+
     const value = {
-        data,
+        state,
+        dispatch
     }
 
   return (

@@ -25,6 +25,7 @@ export const FoodReducer = (state, action) => {
             return{
                 ...state,
                 loading: false,
+                foods: [],
                 error: true
             }
 

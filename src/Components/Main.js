@@ -1,20 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Card from './Card';
+import { useFood } from '../Context/FoodProvider';
 
 function Main() {
 
-  const [foods, setFoods] = useState([]);
-
-  useEffect(()=>{
-    fetch('./food.json')
-    .then(res => res.json())
-    .then(data => setFoods(data.food));
-  },[])
+  const { state: {foods} } = useFood();
 
   return (
     <div className='main'>
       <div className='main-cards'>
-        {foods.map(singleFood => <Card food={singleFood}></Card>)}
+        {foods.map(singleFood => <Card key={singleFood.id} food={singleFood}></Card>)}
       </div>
     </div>
   );
